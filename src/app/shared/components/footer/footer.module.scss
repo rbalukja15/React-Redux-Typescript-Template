@@ -1,0 +1,9 @@
+@import './src/assets/styles/fonts';
+@import './src/assets/styles/valiables';
+@import './src/assets/styles/tools';
+
+.footer {
+  margin-top: calc(5% + 60px);
+  bottom: 0;
+  font-family: $font-bold, sans-serif;
+}

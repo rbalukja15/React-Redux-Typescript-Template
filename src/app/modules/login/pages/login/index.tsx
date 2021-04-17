@@ -1,6 +1,6 @@
 import React, { FunctionComponent, PropsWithChildren, ReactElement } from 'react';
 import { Formik, Form, FormikProps } from 'formik';
-import { FormGroup, FormControl, Input, InputLabel, Button, TextField } from '@material-ui/core';
+import { FormGroup, FormControl, Input, InputLabel, Button, TextField, Typography } from '@material-ui/core';
 import styles from './index.module.scss';
 import { loginActions } from '../../login.actions';
 import { connect } from 'react-redux';
@@ -21,7 +21,9 @@ const Login = (props: PropsWithChildren<OwnProps>): ReactElement<FunctionCompone
     return (
         <div className={styles.login}>
             <div className={styles.login__container}>
-                <h1 className={styles.title}>Login to App</h1>
+                <Typography className={styles.title} variant={'h2'}>
+                    Login to App{' '}
+                </Typography>
                 <Formik
                     initialValues={initialValues}
                     onSubmit={async (values, { setSubmitting }) => {

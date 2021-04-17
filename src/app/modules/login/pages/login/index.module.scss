@@ -22,17 +22,14 @@
     padding: 5% 0;
 
     .title {
-      font-size: 44px;
-      font-weight: bold;
       padding: 5% 0;
-      color: $black-low-color;
       font-family: $font-black, sans-serif;
     }
 
     .loginForm .submitBtn {
       color: $white-color;
       background-color: $red-color;
-      cursor: default;
+      cursor: pointer;
     }
 
     .loginForm .submitBtn:disabled {
@@ -43,12 +40,12 @@
 
     .loginForm .submitBtn:hover {
       color: $black-low-color;
-      background-color: $white-color;
+      background-color: $greyed-red-color;
     }
 
     .formControl .error_span {
       color: $red-color;
-      font-family: $font-regular, sans-serif;
+      font-family: $font-bold, sans-serif;
     }
 
     .formControl .formLabel {
@@ -56,7 +53,7 @@
     }
 
     .formControl .formInput {
-      font-family: $font-regular, sans-serif;
+      font-family: $font-medium, sans-serif;
       text-decoration: none;
     }
   }
