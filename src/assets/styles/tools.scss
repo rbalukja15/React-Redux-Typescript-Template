@@ -1,0 +1,87 @@
+$marginPaddingSizes: 20;
+
+//Global margins
+@for $i from 1 through $marginPaddingSizes {
+  $margin: $i * 0.25rem;
+  /* margin #{$margin} */
+  .m#{$i} {
+    margin: $margin !important;
+  }
+  .ml#{$i} {
+    margin-left: $margin !important;
+  }
+  .mr#{$i} {
+    margin-right: $margin !important;
+  }
+  .mt#{$i} {
+    margin-top: $margin !important;
+  }
+  .mb#{$i} {
+    margin-bottom: $margin !important;
+  }
+  .mx#{$i} {
+    margin-left: $margin !important;
+    margin-right: $margin !important;
+  }
+  .my#{$i} {
+    margin-top: $margin !important;
+    margin-bottom: $margin !important;
+  }
+}
+
+//Global paddings
+@for $i from 1 through $marginPaddingSizes {
+  $padding: $i * 0.25rem;
+  /* padding #{$padding} */
+  .p#{$i} {
+    padding: $padding !important;
+  }
+  .pl#{$i} {
+    padding-left: $padding !important;
+  }
+  .pr#{$i} {
+    padding-right: $padding !important;
+  }
+  .pt#{$i} {
+    padding-top: $padding !important;
+  }
+  .pb#{$i} {
+    padding-bottom: $padding !important;
+  }
+  .px#{$i} {
+    padding-left: $padding !important;
+    padding-right: $padding !important;
+  }
+  .py#{$i} {
+    padding-top: $padding !important;
+    padding-bottom: $padding !important;
+  }
+}
+
+@mixin justifyContent($value: flex-start) {
+  @if $value == flex-start {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+  } @else if $value == flex-end {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+  } @else if $value == space-between {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+  } @else if $value == space-around {
+    -ms-flex-pack: distribute;
+  } @else {
+    -webkit-box-pack: $value;
+    -moz-box-pack: $value;
+    -ms-flex-pack: $value;
+  }
+  -webkit-justify-content: $value;
+  justify-content: $value;
+}
+
+@mixin alignItems($args) {
+  align-items: $args;
+}

@@ -1,6 +1,6 @@
 import React, { FunctionComponent, PropsWithChildren, ReactElement } from 'react';
 import { Formik, Form, FormikProps } from 'formik';
-import { FormGroup, FormControl, Input, InputLabel, Button } from '@material-ui/core';
+import { FormGroup, FormControl, Input, InputLabel, Button, TextField } from '@material-ui/core';
 import styles from './index.module.scss';
 import { loginActions } from '../../login.actions';
 import { connect } from 'react-redux';
@@ -34,36 +34,40 @@ const Login = (props: PropsWithChildren<OwnProps>): ReactElement<FunctionCompone
                         <Form className={styles.loginForm}>
                             <FormGroup>
                                 <FormControl className={clsx(styles.formControl, 'mb8')}>
-                                    <InputLabel id="emailLabel" className={styles.formLabel}>
-                                        Email
-                                    </InputLabel>
-                                    <Input
+                                    <TextField
                                         className={styles.formInput}
+                                        label={'Email'}
                                         name="email"
                                         type="text"
                                         onChange={props.handleChange}
                                         onBlur={props.handleBlur}
                                         value={props.values.email}
+                                        helperText={props.errors.email && props.touched.email ? props.errors.email : ''}
+                                        FormHelperTextProps={{
+                                            className: clsx(styles.error_span, 'mt2'),
+                                        }}
+                                        variant={'outlined'}
+                                        required
                                     />
-                                    <span className={clsx(styles.error_span, 'mt2')}>
-                                        {props.errors.email && props.touched.email ? props.errors.email : ''}
-                                    </span>
                                 </FormControl>
                                 <FormControl className={clsx(styles.formControl, 'mb8')}>
-                                    <InputLabel id="passwordLabel" className={styles.formLabel}>
-                                        Password
-                                    </InputLabel>
-                                    <Input
+                                    <TextField
                                         className={styles.formInput}
+                                        label={'Password'}
                                         name="password"
                                         type="password"
                                         onChange={props.handleChange}
                                         onBlur={props.handleBlur}
                                         value={props.values.password}
+                                        helperText={
+                                            props.errors.password && props.touched.password ? props.errors.password : ''
+                                        }
+                                        FormHelperTextProps={{
+                                            className: clsx(styles.error_span, 'mt2'),
+                                        }}
+                                        variant={'outlined'}
+                                        required
                                     />
-                                    <span className={clsx(styles.error_span, 'mt2')}>
-                                        {props.errors.password && props.touched.password ? props.errors.password : ''}
-                                    </span>
                                 </FormControl>
                                 <Button
                                     className={styles.submitBtn}

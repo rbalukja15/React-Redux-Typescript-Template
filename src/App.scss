@@ -1,5 +1,10 @@
+@import './src/assets/styles/fonts';
+@import './src/assets/styles/valiables';
+@import './src/assets/styles/tools.scss';
+
 .App {
   text-align: center;
+  font-family: "Roboto Regular", sans-serif;
 }
 
 .App-logo {
