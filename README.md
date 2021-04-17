@@ -1,6 +1,29 @@
-# Getting Started with Create React App
+# React-Redux-Typescript Template/Boilerplate
+This is an extended template/boilerplate to get started with React and Typescript.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# What is this boilerplate about?
+This project has all the required features to get started with React, Typescript and Redux.
+Firstly when I started using Redux with Typescript, it was a real pain. After I got used to it, it became a necessity.
+So I created this template so beginners in React-Redux Typescript can have a head-start in their projects.
+I also added some 'good to have' features.
+
+# Tech Stack
+This boilerplate includes:
+1. React
+2. Redux
+3. Typescript
+4. Formik used with Yup
+5. Material-UI used for components
+6. Sass styling
+7. Prettier/Eslint config
+
+# Extras
+I have also included some extra features:
+1. An axios interceptor
+2. Google fonts
+3. Some widely used utils/helpers.
+4. Light/Dark Material-UI Theme
+5. A login page
 
 ## Available Scripts
 
