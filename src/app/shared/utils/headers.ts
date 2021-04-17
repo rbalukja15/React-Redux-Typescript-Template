@@ -19,7 +19,15 @@ const formDataHeaders = () => ({
     'Content-Type': 'multipart/form-data;',
 });
 
+const routeHeaders = () => {
+    return {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+    };
+};
+
 export const headers = {
     authHeader,
     formDataHeaders,
+    routeHeaders,
 };
